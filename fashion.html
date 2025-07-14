@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCart - Fashion</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f1f3f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .categories {
+      background-color: #ffffff;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .categories a div {
+      padding: 10px 15px;
+      font-weight: 500;
+    }
+
+    .categories a div:hover {
+      background-color: #e9ecef;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #172337;
+      color: white;
+    }
+
+         .stars {
+  display: flex;
+  font-size: 20px;
+  color: gold;
+}
+.stars .empty {
+  color: #ccc;
+}
+
+  </style>
+</head>
+
+<body>
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/SmartCart_logo.png" alt="SmartCart Logo" width="60" height="50" class="me-2" />
+        <span class="fw-bold">SmartCart</span>
+      </a>
+      <form class="d-flex mx-3 flex-grow-1">
+        <input class="form-control me-2" type="search" placeholder="Search for products" aria-label="Search" />
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+      <button class="btn btn-outline-light mx-1">Cart</button>
+    </div>
+  </nav>
+
+  <!-- Categories Navigation -->
+  <div class="categories d-flex justify-content-around flex-wrap text-center">
+    <a href="mobiles.html" class="text-decoration-none text-dark">
+      <div>Mobiles</div>
+    </a>
+    <a href="electronics.html" class="text-decoration-none text-dark">
+      <div>Electronics</div>
+    </a>
+    <a href="fashion.html" class="text-decoration-none text-dark">
+      <div>Fashion</div>
+    </a>
+    <a href="home.html" class="text-decoration-none text-dark">
+      <div>Home</div>
+    </a>
+    <a href="appliances.html" class="text-decoration-none text-dark">
+      <div>Appliances</div>
+    </a>
+    <a href="grocery.html" class="text-decoration-none text-dark">
+      <div>Grocery</div>
+    </a>
+    <a href="travel.html" class="text-decoration-none text-dark">
+      <div>Travel</div>
+    </a>
+  </div>
+
+  <!-- Fashion Content -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Fashion</h2>
+    <div class="row">
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\Levi's Men's Slim Jeans.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title">Levi's Men's Slim Jeans</h5>
+            <p>Denim Blue, Cotton Blend</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span class="empty">&#9733;</span>
+</div>
+            <p><del>Rs. 2,999</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 1,899</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('Levis Mens Slim JeansDenim Blue, Cotton Blend')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\Nike Sports Shoes.jpg" class="card-img-top" alt="Nike Sports Shoes AirMax Cushioned, Grey">
+          <div class="card-body">
+            <h5 class="card-title"style="padding-top:250px;">Nike Sports Shoes</h5>
+            <p>AirMax Cushioned, Grey</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span class="empty">&#9733;</span>
+</div>
+            <p><del>Rs. 5,499</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 4,199</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('Nike Sports ShoesAirMax Cushioned, Grey')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\U.S. Polo Men's Polo T-Shirt.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title" style="padding-top: 7px;">U.S. Polo Men's Polo T-Shirt</h5>
+            <p>Cotton, Striped Design</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+</div>
+            <p><del>Rs. 1,699</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 1,099</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('U.S. Polo Mens Polo T-Shirt')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\Red Tape Men's Leather Belt.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title">Red Tape Men's Leather Belt</h5>
+            <p>Brown, Reversible Buckle</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+</div>
+            <p><del>Rs. 1,299</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 849</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('Red Tape Mens Leather Belt')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\Allen Solly Men's Formal Shirt.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title">Allen Solly Men's Formal Shirt</h5>
+            <p>Slim Fit, Sky Blue</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+</div>
+            <p><del>Rs. 1,899</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 1,399</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('Allen Solly Mens Formal Shirt')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\HRX Men's Joggers.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title">HRX Men's Joggers</h5>
+            <p>Slim Fit, Charcoal Grey</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+</div>
+            <p><del>Rs. 1,499</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 999</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('HRX Mens Joggers')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\Puma Men's Hoodie.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title">	Puma Men's Hoodie</h5>
+            <p>Fleece-Lined, Black, Zip Front</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span class="empty">&#9733;</span>
+</div>
+            <p><del>Rs. 2,999</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 2,099</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('Puma Mens Hoodie')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="images\Roadster Men's T-Shirt.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title">Roadster Men's T-Shirt	</h5>
+            <p>100% Cotton, Round Neck</p>
+            <div class="stars">
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span>&#9733;</span>
+  <span class="empty">&#9733;</span>
+</div>
+            <p><del>Rs. 799</del></p>
+            <p class="card-text text-success fw-semibold">Rs. 499</p>
+            <button class="btn btn-primary w-100" onclick="addToCart('Roadster Mens T-Shirt100% Cotton, Round Neck')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-white mt-5 pt-4 pb-2">
+  <div class="container">
+    <div class="row text-start">
+      <!-- About -->
+      <div class="col-md-2 col-sm-6 mb-3">
+        <h6 class="text-uppercase">About</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+          <li><a href="#" class="text-white text-decoration-none">SmartCart Stories</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Press</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Corporate Information</a></li>
+        </ul>
+      </div>
+
+      <!-- Group Companies -->
+      <div class="col-md-2 col-sm-6 mb-3">
+        <h6 class="text-uppercase">Group Companies</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Myntra</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Cleartrip</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Shopsy</a></li>
+        </ul>
+      </div>
+
+      <!-- Help -->
+      <div class="col-md-2 col-sm-6 mb-3">
+        <h6 class="text-uppercase">Help</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Payments</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Shipping</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Cancellation & Returns</a></li>
+          <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Policy -->
+      <div class="col-md-2 col-sm-6 mb-3">
+        <h6 class="text-uppercase">Consumer Policy</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Cancellation & Returns</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Terms Of Use</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Security</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Privacy</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Sitemap</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Grievance Redressal</a></li>
+          <li><a href="#" class="text-white text-decoration-none">EPR Compliance</a></li>
+        </ul>
+      </div>
+
+      <!-- Address -->
+      <div class="col-md-4 col-sm-12 mb-3">
+        <h6 class="text-uppercase">Mail Us: support@smartcart.com</h6>
+        <p class="mb-1">SmartCart Internet Private Limited,</p>
+        <p class="mb-1">Buildings A, B & C, TechPark,</p>
+        <p class="mb-1">Ring Road, Bengaluru, Karnataka - 560103</p>
+        <p class="mb-1">India</p>
+        <h6 class="text-uppercase mt-3">Social:</h6>
+        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+
+    <hr class="bg-secondary" />
+
+    <!-- Bottom row -->
+    <div class="row text-center">
+      <div class="col-md-3 col-sm-6 mb-2">
+        <small>Become a Seller</small>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-2">
+        <small>Advertise</small>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-2">
+        <small>Gift Cards</small>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-2">
+        <small>Help Center</small>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <small>&copy; 2025 SmartCart</small>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    function addToCart(product) {
+      alert(`${product} added to cart!`);
+    }
+  </script>
+
+</body>
+
+</html>
